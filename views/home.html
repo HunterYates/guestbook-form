@@ -4,49 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles\styles.css">
+    <link rel="icon" type="image/png" href="images/starIcon.png"
 </head>
 <body>
-
-    <div class="form-container">
-        <h2>Contact Form</h2>
-        <form action="#" method="POST">
-            <div class="form-row">
-                <input type="text" name="first_name" placeholder="First Name">
-                <input type="text" name="last_name" placeholder="Last Name">
-                <input type="text" name="job_title" placeholder="Job Title">
-            </div>
-            <div class="form-row">
-                <input type="text" name="company" placeholder="Company">
-                <input type="text" name="linkedin" placeholder="LinkedIn URL">
-                <input type="email" name="email" placeholder="Email Address">
-            </div>
-            <div class="form-row">
+    <h2>Contact Form</h2>
+    <form action="#" method="POST">
+        <div id="topInputs">
+            <label class="firstSix">First Name
+                <input type="text" name="first_name">
+            </label>
+            <label class="firstSix">Last Name
+                <input type="text" name="last_name">
+            </label>
+            <label class="firstSix">Job Title
+                <input type="text" name="job_title">
+            </label>
+            <label class="firstSix">Company
+                <input type="text" name="company">
+            </label>
+            <label class="firstSix">LinkedIn URL
+                <input type="text" name="linkedin">
+            </label>
+            <label class="firstSix">Email Address
+                <input type="email" name="email">
+            </label>            
+            <label class="howMeet">How did we meet?
                 <select name="how_met">
                     <option>Please select</option>
                     <option>Conference</option>
                     <option>Online</option>
                     <option>Referral</option>
                 </select>
-                <input type="text" name="other" placeholder="Other (please specify)">
-            </div>
-            <div class="form-row">
-                <textarea name="message" placeholder="Message"></textarea>
-            </div>
-            <div class="form-row checkbox-group">
-                <input type="checkbox" id="mailing_list" name="mailing_list">
-                <label for="mailing_list">Please add me to your mailing list</label>
-            </div>
-            <div class="form-row radio-group">
-                <label>Choose an email format:</label>
-                <input type="radio" id="html" name="email_format" value="html">
-                <label for="html">HTML</label>
-                <input type="radio" id="text" name="email_format" value="text">
-                <label for="text">Text</label>
-            </div>
+            </label>
+            <label class="howMeet">Other (please specify)
+                <input type="text" name="other">
+            </label>
+            <label class="messageText">Message
+                <textarea name="message"></textarea>
+            </label>            
+        </div>
+        
+        <div id="bottomInputs">
+            <label>
+                <input type="checkbox" name="mailing_list">
+                Please add me to your mailing list
+            </label>
+            <label>Choose an email format:
+                <input type="radio" name="email_format" value="html" checked>
+                <input type="radio" name="email_format" value="text">
+            </label>
+            
             <button type="submit">Submit</button>
-        </form>
-    </div>
+        </div>
+    </form>
 
 </body>
 </html>
