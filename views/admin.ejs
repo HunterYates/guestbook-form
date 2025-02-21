@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Guest summary</title>
+     <link rel="stylesheet" href="styles/base-styles.css">
+     <link rel="stylesheet" href="styles/other-pages.css">
+     <link rel="icon" type="image/png" href="images/starIcon.png"
+</head>
+<body>
+     <nav>
+          <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="admin">Admin</a></li>
+          </ul>
+     </nav>
+     <hr>
+
+     <h1>Guest Summary</h1>
+
+     <% if (guests.length == 0) { %> 
+          <p>No guests yet!</p>
+      <% } else { %> 
+          <% for (let i = 0; i < guests.length; i++) { %>
+              <p><%= guests[i].fname %> <%= guests[i].lname %></p>
+              <hr>
+          <% } %>
+      <% } %>
+     
+</body>
+</html>

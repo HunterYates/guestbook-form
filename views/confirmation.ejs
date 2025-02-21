@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Confirmation</title>
+     <link rel="stylesheet" href="styles/base-styles.css">
+     <link rel="stylesheet" href="styles/other-pages.css">
+     <link rel="icon" type="image/png" href="images/starIcon.png"
+</head>
+<body>
+     <nav>
+          <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="admin">Admin</a></li>
+          </ul>
+     </nav>
+     <hr>
+
+     <h3>Thankyou, <%= guest.fname %>!</h3>
+     <p>Name: <%= `${guest.fname} ${guest.lname}` %></p>
+     <p>Job title: <%= guest.jtitle %></p>
+     <p>Company: <%= guest.company %></p>
+     <p>LinkedIn: <%= guest.linedin %></p>
+     <p>Email: <%= guest.email %></p>
+     <P>How we met: <%= guest.howmeet %></P>
+     <P>Other: <%= guest.other %></P>
+     <P>Message: <%= guest.other %></P>
+     <% if (!guest.mlist == "") { %>
+          <P>Mailing list: <%= guest.mlist %></P>
+     <% } else { %> 
+          <P>Mailing list: No</P>
+     <% } %>
+     <P>Email format: <%= guest.eformat %></P>
+     <P>Time: <%= guest.timestamp %></P>
+
+</body>
+</html>
